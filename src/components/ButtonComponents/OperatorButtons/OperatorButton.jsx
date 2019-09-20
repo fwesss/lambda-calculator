@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../Button.css';
+import './OperatorButton.css';
+
+
 const OperatorButton = ({ operator }) => (
   <>
     {/* Display a button element rendering the data being passed down from the parent container on
     props */}
-    <button type="button">{operator.char}</button>
+    <button className="Button OperatorButton" type="button">{operator.char}</button>
   </>
 );
 

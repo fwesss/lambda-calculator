@@ -1,0 +1,15 @@
+/* @define Button */
+
+.Button {
+  width: 5.75rem;
+  height: 5.75rem;
+  margin: 0.25rem 0.75rem;
+  color: #b5eef4;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+.Button:nth-of-type(10) {
+  width: 13rem;
+  border-radius: 40px;
+}

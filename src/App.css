@@ -1,23 +1,17 @@
-.container {
-  width: 100%;
-  max-width: 550px;
-  padding-bottom: 25px;
-  background-color: #c00025;
-  border: 2px solid grey;
-  border-radius: 15px;
+/* @define App */
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
-.display {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  width: 450px;
-  height: 100px;
-  margin-top: 25px;
-  padding-right: 8%;
-  color: white;
-  font-size: 5rem;
-  background-color: #322c2d;
-  border-radius: 50px;
-  box-shadow: 1px 1px #322c2d;
+.App-leftButtons {
+  width: 75%;
+  text-align: center;
+}
+
+.App-rightButtons {
+  width: 25%;
+  text-align: center;
 }
