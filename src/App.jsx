@@ -1,12 +1,14 @@
-import React from 'react';
-import './index.css';
-import './App.css';
+import React, { useState } from 'react';
 
 import Logo from './components/DisplayComponents/Logo';
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators';
 import Specials from './components/ButtonComponents/SpecialButtons/Specials';
 import Display from './components/DisplayComponents/Display';
+
+import './index.css';
+import './App.css';
+
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state
@@ -19,17 +21,23 @@ function App() {
   // function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+  const [operatorState, setOperatorState] = useState('');
+  const [numberState, setNumberState] = useState('');
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
-        <Display />
+        <Display numberState={numberState} />
         <div className="App-leftButtons">
-          <Specials />
-          <Numbers />
+          <Specials
+            numberState={numberState}
+            setNumberState={setNumberState}
+          />
+          <Numbers numberState={numberState} setNumberState={setNumberState} />
         </div>
         <div className="App-rightButtons">
-          <Operators />
+          <Operators operatorState={operatorState} setOperatorState={setOperatorState} />
         </div>
       </div>
     </div>

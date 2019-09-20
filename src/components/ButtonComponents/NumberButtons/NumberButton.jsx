@@ -5,13 +5,23 @@ import '../Button.css';
 import './NumberButton.css';
 
 
-const NumberButton = ({ number }) => (
+const NumberButton = ({ numberState, setNumberState, number }) => (
   <>
-    <button className="Button NumberButton" type="button">{number}</button>
+    <button
+      className="Button NumberButton"
+      type="button"
+      onClick={() => {
+        setNumberState(numberState + number);
+      }}
+    >
+      {number}
+    </button>
   </>
 );
 
 NumberButton.propTypes = {
+  numberState: PropTypes.string.isRequired,
+  setNumberState: PropTypes.func.isRequired,
   number: PropTypes.string.isRequired,
 };
 

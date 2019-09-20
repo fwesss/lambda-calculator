@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { operators } from '../../../data';
 
 import OperatorButton from './OperatorButton';
 
 
 const Operators = () => {
-  const [operatorState, setOperatorState] = useState(operators);
+
 
   return (
     <>
