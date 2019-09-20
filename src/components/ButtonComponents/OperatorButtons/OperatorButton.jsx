@@ -10,7 +10,7 @@ const OperatorButton = ({ operator }) => (
 );
 
 OperatorButton.propTypes = {
-  operator: PropTypes.string.isRequired,
+  operator: PropTypes.shape().isRequired,
 };
 
 export default OperatorButton;
