@@ -12,7 +12,7 @@ const SpecialButton = ({ special, numberState, setNumberState }) => (
       type="button"
       onClick={() => {
         if (special === 'C') {
-          setNumberState('');
+          setNumberState('0');
         } else if (special === '%') {
           setNumberState((parseFloat(numberState) / 100).toString());
         } else {
