@@ -5,7 +5,10 @@ import '../Button.css';
 import './SpecialButton.css';
 
 
-const SpecialButton = ({ special, numberState, setNumberState }) => (
+const SpecialButton = ({
+  percentageState,
+  setPercentageState, special, numberState, setNumberState,
+}) => (
   <>
     <button
       className="Button SpecialButton"
@@ -13,8 +16,12 @@ const SpecialButton = ({ special, numberState, setNumberState }) => (
       onClick={() => {
         if (special === 'C') {
           setNumberState('0');
+          setPercentageState(false);
         } else if (special === '%') {
-          setNumberState((parseFloat(numberState) / 100).toString());
+          if (percentageState === false) {
+            setNumberState((parseFloat(numberState) / 100).toString());
+            setPercentageState(true);
+          }
         } else {
           setNumberState((parseFloat(numberState) * -1).toString());
         }
@@ -26,6 +33,8 @@ const SpecialButton = ({ special, numberState, setNumberState }) => (
 );
 
 SpecialButton.propTypes = {
+  setPercentageState: PropTypes.func.isRequired,
+  percentageState: PropTypes.bool.isRequired,
   setNumberState: PropTypes.func.isRequired,
   numberState: PropTypes.string.isRequired,
   special: PropTypes.string.isRequired,

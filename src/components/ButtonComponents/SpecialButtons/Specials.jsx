@@ -5,13 +5,17 @@ import { specials } from '../../../data';
 import SpecialButton from './SpecialButton';
 
 
-const Specials = ({ setNumberState, numberState }) => (
+const Specials = ({
+  percentageState, setPercentageState, setNumberState, numberState,
+}) => (
   <div className="Specials">
     {specials.map((special) => (
       <SpecialButton
         key={special}
         setNumberState={setNumberState}
         numberState={numberState}
+        percentageState={percentageState}
+        setPercentageState={setPercentageState}
         special={special}
       />
     ))}
@@ -19,6 +23,8 @@ const Specials = ({ setNumberState, numberState }) => (
 );
 
 Specials.propTypes = {
+  setPercentageState: PropTypes.func.isRequired,
+  percentageState: PropTypes.bool.isRequired,
   setNumberState: PropTypes.func.isRequired,
   numberState: PropTypes.string.isRequired,
 };
