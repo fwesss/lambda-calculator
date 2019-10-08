@@ -1,0 +1,16 @@
+/* @define Display */
+
+.Display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 360px;
+  height: 100px;
+  margin: 1rem auto 1.5rem;
+  padding-right: 8%;
+  color: white;
+  font-size: 5rem;
+  background-color: #322c2d;
+  border-radius: 50px;
+  box-shadow: 1px 1px #322c2d;
+}
